@@ -4,9 +4,16 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "prettier":"npx prettier --write *.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --debug *.js",
-    "lint:write": "eslint --debug *.js --fix"
+    "lint:write": "eslint --debug *.js --fix",
+    "prettier": "npx prettier --write *.js",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run-script lint"
+    }
   },
   "repository": {
     "type": "git",
