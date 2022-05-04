@@ -2,14 +2,14 @@ let user = "John Doe";
 console.log(user);
 let student = "Tonya Kolb";
 console.log(student);
-user = student; // в переменной user будет значение student
+user = student; // in the variable user will be value of student
 console.log(user);
 
 let test = 1;
 test += 1;
-test = test + "1"; // будет 21
+test = test + "1"; // will be 21
 console.log(test);
-test = test - 1; // 20
+test = test - 1; // will be 20
 console.log(test);
 let test2 = Boolean(test);
 console.log(test2);
