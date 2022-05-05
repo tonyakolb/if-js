@@ -34,3 +34,53 @@ for (let i = 0; i < arr3.length; i++) {
     console.log(arr3[i]);
   }
 }
+
+let array = [];
+for (let i = 0; i < 10; i++) {
+  array.push(Math.round(Math.random() * 100));
+}
+console.log(array);
+
+function transform(number) {
+  if (`${number}`.includes("0")) {
+    return `${number}`.replaceAll("0", "zero");
+  } else {
+    return number;
+  }
+}
+console.log(transform(array));
+
+function min(a, b) {
+  if (a > b) {
+    return b;
+  } else {
+    return a;
+  }
+}
+console.log(min(5, 17));
+
+function max(a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+console.log(max(5, 17));
+
+let c = 5;
+let d = 17;
+let minEl = c > d ? d : c;
+console.log(minEl);
+let maxEl = c > d ? c : d;
+console.log(maxEl);
+
+function palindrome(str) {
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] !== str[str.length - i - 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(palindrome("anna"));
