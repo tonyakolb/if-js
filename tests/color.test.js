@@ -18,14 +18,13 @@ function changeColor() {
     }
   };
 }
-module.exports = changeColor();
 
 test('first click - color magenta', async () => {
   for (let i = 0; i < text.length; i++) {
     text[i].click();
     changeColor(text[i]);
-    const color2 = text[i].style.color;
-    expect(color2).toBe('magenta');
+    const color = text[i].style.color;
+    expect(color).toBe('magenta');
   }
 });
 
@@ -33,8 +32,8 @@ test('second click - color cyan', async () => {
   for (let i = 0; i < text.length; i++) {
     text[i].click();
     changeColor(text[i]);
-    const color2 = text[i].style.color;
-    expect(color2).toBe('cyan');
+    const color = text[i].style.color;
+    expect(color).toBe('cyan');
   }
 });
 
@@ -42,8 +41,8 @@ test('third click - color firebrick', async () => {
   for (let i = 0; i < text.length; i++) {
     text[i].click();
     changeColor(text[i]);
-    const color2 = text[i].style.color;
-    expect(color2).toBe('firebrick');
+    const color = text[i].style.color;
+    expect(color).toBe('firebrick');
   }
 });
 
@@ -51,8 +50,8 @@ test('fourth click - color springgreen', async () => {
   for (let i = 0; i < text.length; i++) {
     text[i].click();
     changeColor(text[i]);
-    const color2 = text[i].style.color;
-    expect(color2).toBe('springgreen');
+    const color = text[i].style.color;
+    expect(color).toBe('springgreen');
   }
 });
 
@@ -60,7 +59,7 @@ test('fifth click - color skyblue', async () => {
   for (let i = 0; i < text.length; i++) {
     text[i].click();
     changeColor(text[i]);
-    const color2 = text[i].style.color;
-    expect(color2).toBe('skyblue');
+    const color = text[i].style.color;
+    expect(color).toBe('skyblue');
   }
 });

@@ -1,13 +1,13 @@
-let user = "John Doe";
+let user = 'John Doe';
 console.log(user);
-const student = "Tonya Kolb";
+const student = 'Tonya Kolb';
 console.log(student);
 user = student; // in the variable user will be value of student
 console.log(user);
 
 let test = 1;
 test += 1;
-test = test + "1"; // will be 21
+test = test + '1'; // will be 21
 console.log(test);
 test = test - 1; // will be 20
 console.log(test);
@@ -42,8 +42,8 @@ for (let i = 0; i < 10; i++) {
 console.log(array);
 
 function transform(array1) {
-  if (`${array1}`.includes("0")) {
-    return `${array1}`.replaceAll("0", "zero").split(",");
+  if (`${array1}`.includes('0')) {
+    return `${array1}`.replaceAll('0', 'zero').split(',');
   } else {
     return array1;
   }
@@ -83,7 +83,7 @@ function palindrome(str) {
   }
   return true;
 }
-console.log(palindrome("anna"));
+console.log(palindrome('anna'));
 
 // task 1
 const sum = function (x) {
