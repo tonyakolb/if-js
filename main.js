@@ -1,6 +1,6 @@
 let user = "John Doe";
 console.log(user);
-let student = "Tonya Kolb";
+const student = "Tonya Kolb";
 console.log(student);
 user = student; // in the variable user will be value of student
 console.log(user);
@@ -11,7 +11,7 @@ test = test + "1"; // will be 21
 console.log(test);
 test = test - 1; // will be 20
 console.log(test);
-let test2 = Boolean(test);
+const test2 = Boolean(test);
 console.log(test2);
 
 let result = 1;
@@ -35,17 +35,17 @@ for (let i = 0; i < arr3.length; i++) {
   }
 }
 
-let array = [];
+const array = [];
 for (let i = 0; i < 10; i++) {
   array.push(Math.round(Math.random() * 100));
 }
 console.log(array);
 
-function transform(number) {
-  if (`${number}`.includes("0")) {
-    return `${number}`.replaceAll("0", "zero");
+function transform(array1) {
+  if (`${array1}`.includes("0")) {
+    return `${array1}`.replaceAll("0", "zero").split(",");
   } else {
-    return number;
+    return array1;
   }
 }
 console.log(transform(array));
@@ -68,11 +68,11 @@ function max(a, b) {
 }
 console.log(max(5, 17));
 
-let c = 5;
-let d = 17;
-let minEl = c > d ? d : c;
+const c = 5;
+const d = 17;
+const minEl = c > d ? d : c;
 console.log(minEl);
-let maxEl = c > d ? c : d;
+const maxEl = c > d ? c : d;
 console.log(maxEl);
 
 function palindrome(str) {
@@ -84,3 +84,32 @@ function palindrome(str) {
   return true;
 }
 console.log(palindrome("anna"));
+
+// task 1
+const sum = function (x) {
+  return function (y) {
+    return x + y;
+  };
+};
+console.log(sum(5)(2));
+
+// // task 2
+// const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+// const text = document.getElementsByTagName('p');
+//
+// for (let i = 0; i < text.length; i++) {
+//   text[i].addEventListener('click', changeColor());
+// }
+//
+// function changeColor() {
+//   let color = 0;
+//
+//   return function () {
+//     this.style.color = colors[color];
+//     color++;
+//
+//     if (color === colors.length) {
+//       color = 0;
+//     }
+//   };
+// }
