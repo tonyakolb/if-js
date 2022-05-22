@@ -86,30 +86,66 @@ function palindrome(str) {
 console.log(palindrome('anna'));
 
 // task 1
-const sum = function (x) {
-  return function (y) {
-    return x + y;
-  };
-};
-console.log(sum(5)(2));
+function changeDate(dateStr) {
+  const date = new Date(dateStr);
+  return date.toLocaleString();
+}
+console.log(changeDate('2021-10-15'));
 
-// // task 2
-// const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
-// const text = document.getElementsByTagName('p');
-//
-// for (let i = 0; i < text.length; i++) {
-//   text[i].addEventListener('click', changeColor());
-// }
-//
-// function changeColor() {
-//   let color = 0;
-//
-//   return function () {
-//     this.style.color = colors[color];
-//     color++;
-//
-//     if (color === colors.length) {
-//       color = 0;
-//     }
-//   };
-// }
+// task 2
+const data = [
+  {
+    country: 'Russia',
+    city: 'Saint Petersburg',
+    hotel: 'Hotel Leopold',
+  },
+  {
+    country: 'Spain',
+    city: 'Santa Cruz de Tenerife',
+    hotel: 'Apartment Sunshine',
+  },
+  {
+    country: 'Slowakia',
+    city: 'Vysokie Tatry',
+    hotel: 'Villa Kunerad',
+  },
+  {
+    country: 'Germany',
+    city: 'Berlin',
+    hotel: 'Hostel Friendship',
+  },
+  {
+    country: 'Indonesia',
+    city: 'Bali',
+    hotel: 'Ubud Bali Resort&SPA',
+  },
+  {
+    country: 'Netherlands',
+    city: 'Rotterdam',
+    hotel: 'King Kong Hostel',
+  },
+  {
+    country: 'Marocco',
+    city: 'Ourika',
+    hotel: 'Rokoko Hotel',
+  },
+  {
+    country: 'Germany',
+    city: 'Berlin',
+    hotel: 'Hotel Rehberge Berlin Mitte',
+  },
+];
+
+function search(val) {
+  const result = [];
+  for (let i = 0; i < data.length; i++) {
+    const current = data[i];
+    for (const key in current) {
+      if (current[key] === val) {
+        result.push(current);
+      }
+    }
+  }
+  return result;
+}
+console.log(search('Berlin'));
