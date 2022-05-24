@@ -136,12 +136,14 @@ const data = [
   },
 ];
 
-function search(val) {
+function search(stringForSearch) {
   const result = [];
+
   for (let i = 0; i < data.length; i++) {
     const current = data[i];
+
     for (const key in current) {
-      if (current[key] === val) {
+      if (current[key] === stringForSearch) {
         result.push(current);
       }
     }
