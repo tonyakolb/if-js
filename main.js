@@ -150,11 +150,9 @@ function search(stringForSearch) {
 }
 console.log(search('Berlin'));
 
-// task 1
 const isPalindrome = (str) => str === str.split('').reverse().join('');
 console.log(isPalindrome('madam'));
 
-// task 2
 const hotels = [
   {
     name: 'Hotel Leopold',
@@ -331,7 +329,6 @@ function searchForHotels(stringForSearch) {
 }
 console.log(searchForHotels('Berlin'));
 
-// task 3
 function getUniqueCountriesAndCities() {
   const objCountriesAndCities = {};
 
@@ -348,3 +345,66 @@ function getUniqueCountriesAndCities() {
   return objCountriesAndCities;
 }
 console.log(getUniqueCountriesAndCities());
+
+// task 1
+
+const obj1 = {
+  a: 'a',
+  b: {
+    a: 'a',
+    b: 'b',
+    c: {
+      a: 1,
+    },
+  },
+};
+const obj2 = {
+  b: {
+    c: {
+      a: 1,
+    },
+    b: 'b',
+    a: 'a',
+  },
+  a: 'a',
+};
+const obj3 = {
+  a: {
+    c: {
+      a: 'a',
+    },
+    b: 'b',
+    a: 'a',
+  },
+  b: 'b',
+};
+
+const deepEqual = (object1, object2) => {
+  if (typeof object1 === typeof object2) {
+    if (typeof object1 == 'object' && object1 != null) {
+      let equals = true;
+
+      for (const property in object1) {
+        if (
+          Object.prototype.hasOwnProperty.call(object1, property) &&
+          Object.prototype.hasOwnProperty.call(object2, property)
+        ) {
+          if (!deepEqual(object1[property], object2[property])) {
+            equals = false;
+          }
+        } else {
+          equals = false;
+        }
+      }
+      return equals;
+    } else {
+      return object1 === object2;
+    }
+  } else {
+    return false;
+  }
+};
+
+console.log(deepEqual(obj1, obj2)); // true
+console.log(deepEqual(obj1, obj3)); // false
+console.log(deepEqual(obj2, obj3)); // false
