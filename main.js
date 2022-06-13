@@ -1,8 +1,8 @@
 let user = 'John Doe';
 console.log(user);
-const student = 'Tonya Kolb';
-console.log(student);
-user = student; // in the variable user will be value of student
+const student1 = 'Tonya Kolb';
+console.log(student1);
+user = student1; // in the variable user will be value of student
 console.log(user);
 
 let test = 1;
@@ -414,6 +414,7 @@ class User {
     this.firstName = firstName;
     this.lastName = lastName;
   }
+
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
   }
@@ -425,11 +426,12 @@ class Student extends User {
     this.admissionYear = admissionYear;
     this.courseName = courseName;
   }
+
   get course() {
     return new Date().getFullYear() - this.admissionYear;
   }
 }
-console.log(Student);
+console.log(Student); // now no no-unused-vars
 
 const studentsData = [
   {
@@ -462,32 +464,35 @@ class Students {
   constructor(array) {
     this.array = array;
   }
+
   course(student) {
     return new Date().getFullYear() - student.admissionYear;
   }
+
   fullName(student) {
     return `${student.firstName} ${student.lastName}`;
   }
-}
 
-Students.prototype.getInfo = function () {
-  const newArray = [];
-  this.array.sort((a, b) =>
-    this.course(a) > this.course(b)
-      ? 1
-      : this.course(a) === this.course(b)
-      ? this.fullName(a) > this.fullName(b)
-        ? 1
-        : -1
-      : -1
-  );
-  this.array.forEach((student) => {
-    const string =
-      this.fullName(student) + ' - ' + student.courseName + ', ' + this.course(student) + ' курс';
-    newArray.push(string);
-  });
-  return newArray;
-};
+  getInfo() {
+    const newArray = [];
+    const thisVar = this;
+    thisVar.array.sort(function (a, b) {
+      if (thisVar.course(a) > thisVar.course(b)) {
+        return 1;
+      }
+      if (thisVar.course(a) < thisVar.course(b)) {
+        return -1;
+      }
+      return 0;
+    });
+    this.array.forEach((student) => {
+      const string =
+        this.fullName(student) + ' - ' + student.courseName + ', ' + this.course(student) + ' курс';
+      newArray.push(string);
+    });
+    return newArray;
+  }
+}
 
 const students = new Students(studentsData);
 console.log(students.getInfo());
