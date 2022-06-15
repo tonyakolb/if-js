@@ -1,8 +1,8 @@
 let user = 'John Doe';
 console.log(user);
-const student = 'Tonya Kolb';
-console.log(student);
-user = student; // in the variable user will be value of student
+const student1 = 'Tonya Kolb';
+console.log(student1);
+user = student1; // in the variable user will be value of student
 console.log(user);
 
 let test = 1;
@@ -346,8 +346,6 @@ function getUniqueCountriesAndCities() {
 }
 console.log(getUniqueCountriesAndCities());
 
-// task 1
-
 const obj1 = {
   a: 'a',
   b: {
@@ -408,3 +406,93 @@ const deepEqual = (object1, object2) => {
 console.log(deepEqual(obj1, obj2)); // true
 console.log(deepEqual(obj1, obj3)); // false
 console.log(deepEqual(obj2, obj3)); // false
+
+// task classes
+
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+class Student extends User {
+  constructor(firstName, lastName, admissionYear, courseName) {
+    super(firstName, lastName);
+    this.admissionYear = admissionYear;
+    this.courseName = courseName;
+  }
+
+  get course() {
+    return new Date().getFullYear() - this.admissionYear;
+  }
+}
+console.log(Student); // now no no-unused-vars
+
+const studentsData = [
+  {
+    firstName: 'Василий',
+    lastName: 'Петров',
+    admissionYear: 2019,
+    courseName: 'Java',
+  },
+  {
+    firstName: 'Иван',
+    lastName: 'Иванов',
+    admissionYear: 2018,
+    courseName: 'JavaScript',
+  },
+  {
+    firstName: 'Александр',
+    lastName: 'Федоров',
+    admissionYear: 2017,
+    courseName: 'Python',
+  },
+  {
+    firstName: 'Николай',
+    lastName: 'Петров',
+    admissionYear: 2019,
+    courseName: 'Android',
+  },
+];
+
+class Students {
+  constructor(array) {
+    this.array = array;
+  }
+
+  course(student) {
+    return new Date().getFullYear() - student.admissionYear;
+  }
+
+  fullName(student) {
+    return `${student.firstName} ${student.lastName}`;
+  }
+
+  getInfo() {
+    const newArray = [];
+    const thisVar = this;
+    thisVar.array.sort(function (a, b) {
+      if (thisVar.course(a) > thisVar.course(b)) {
+        return 1;
+      }
+      if (thisVar.course(a) < thisVar.course(b)) {
+        return -1;
+      }
+      return 0;
+    });
+    this.array.forEach((student) => {
+      const string =
+        this.fullName(student) + ' - ' + student.courseName + ', ' + this.course(student) + ' курс';
+      newArray.push(string);
+    });
+    return newArray;
+  }
+}
+
+const students = new Students(studentsData);
+console.log(students.getInfo());
