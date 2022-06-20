@@ -485,6 +485,7 @@ class Students {
       }
       return 0;
     });
+    //this.array.sort((current, next) => this.course(current) - this.course(next));
     this.array.forEach((student) => {
       const string =
         this.fullName(student) + ' - ' + student.courseName + ', ' + this.course(student) + ' курс';
@@ -496,3 +497,37 @@ class Students {
 
 const students = new Students(studentsData);
 console.log(students.getInfo());
+
+// advanced js
+
+const texts = document.getElementsByTagName('p');
+
+const colors = {
+  data: ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'],
+  [Symbol.iterator]() {
+    return this;
+  },
+  next(idElement) {
+    if (this.idElement === undefined) {
+      this.idElement = 0;
+    }
+    if (this[idElement] <= this.data.length - 1) {
+      return {
+        done: false,
+        value: this.data[this[idElement]++],
+      };
+    } else {
+      this[idElement] = 0;
+      return {
+        done: false,
+        value: this.data[this[idElement]++],
+      };
+    }
+  },
+};
+
+for (const text of texts) {
+  text.addEventListener('click', () => {
+    text.style.color = colors.next(text.id).value;
+  });
+}
