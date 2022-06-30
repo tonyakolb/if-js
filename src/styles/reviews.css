@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+.reviews-title {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 40px;
+  color: #383838;
+  margin: 120px 0 104px;
+}
+
+.reviews-title-mini {
+  display: none;
+}
+
+.reviews {
+  display: flex;
+}
+
+.review {
+  background: #eaf0f9;
+  margin-bottom: 120px;
+  margin-left: 16px;
+}
+
+.review:first-child {
+  margin-left: 0;
+}
+
+.photo-caption {
+  position: relative;
+}
+
+.photo-caption img.photo {
+  width: 100%;
+}
+
+.field {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(56, 56, 56, 0.7);
+  width: 100%;
+  height: 8.333%;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+span.price {
+  margin-left: 24px;
+}
+
+.resort-caption {
+  display: flex;
+  flex-direction: column;
+}
+
+.resort-exposition {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 24px;
+  margin-bottom: 29px;
+}
+
+.resort-name {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #3077c6;
+}
+
+.resort-location {
+  color: #3077c6;
+  font-size: 18px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 24px;
+  margin-top: 24px;
+}
+
+.amount-reviews {
+  margin-top: 8px;
+  color: #bfbfbf;
+  font-size: 14px;
+}
+
+.user {
+  margin-left: 29px;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: row;
+}
+
+.for-review {
+  width: 53px;
+  height: 53px;
+  fill: #bfbfbf;
+}
+
+.username {
+  margin-left: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name {
+  font-size: 18px;
+  color: #383838;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.country-name {
+  font-size: 18px;
+  color: #bfbfbf;
+}
+
+.text-review {
+  color: #383838;
+  font-size: 18px;
+  margin: 0 24px 66px;
+}
+
+.slider-review {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 94%;
+  top: 50%;
+}
+
+.navigation {
+  display: none;
+}
+
+@media only screen and (max-width: 680px) {
+  .reviews-main {
+    background: #eaf0f9;
+  }
+
+  .reviews-title {
+    display: none;
+  }
+
+  .reviews-title-mini {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 28px;
+    color: #383838;
+    padding-top: 40px;
+    margin: 0 0 32px;
+  }
+
+  .review:not(:first-child) {
+    display: none;
+  }
+
+  .reviews {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-review {
+    margin-bottom: 0;
+  }
+
+  .review {
+    margin-bottom: 0;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 40px;
+  }
+}

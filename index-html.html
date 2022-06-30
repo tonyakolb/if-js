@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="my first works" />
+    <meta name="keywords" content="HTML,CSS" />
+    <meta name="author" content="Tonya Kolb" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/styles/advantages-style.css" rel="stylesheet" />
+    <link href="src/styles/footer.css" rel="stylesheet" />
+    <link href="src/styles/fonts.css" rel="stylesheet" />
+    <link href="src/styles/top-section.css" rel="stylesheet" />
+    <link href="src/styles/homes.css" rel="stylesheet" />
+    <link href="src/styles/destinations.css" rel="stylesheet" />
+    <link href="src/styles/sign-up.css" rel="stylesheet" />
+    <link href="src/styles/reviews.css" rel="stylesheet" />
+    <title>Title</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="top-section">
+        <div>
+          <img src="images/logo_triphouse.svg" alt="triphouse_logo" />
+        </div>
+        <nav>
+          <div class="words">
+            <a href="/"><span class="roboto-400 title-header">Stays</span></a>
+            <a href="/"><span class="roboto-400 title-header">Attractions</span></a>
+          </div>
+          <svg width="0" height="0" class="hidden">
+            <symbol viewBox="0 0 24 16" id="menu">
+              <path
+                d="M0 16H24V13.3333H0V16ZM0 9.33333H24V6.66667H0V9.33333ZM0 0V2.66667H24V0H0Z"
+              ></path>
+            </symbol>
+            <symbol viewBox="0 0 24 24" id="AccountCircle">
+              <path
+                d="M12 0C5.376 0 0 5.376 0 12C0 18.624 5.376 24 12 24C18.624 24 24 18.624 24 12C24 5.376 18.624 0 12 0ZM12 3.6C13.992 3.6 15.6 5.208 15.6 7.2C15.6 9.192 13.992 10.8 12 10.8C10.008 10.8 8.4 9.192 8.4 7.2C8.4 5.208 10.008 3.6 12 3.6ZM12 20.64C9 20.64 6.348 19.104 4.8 16.776C4.836 14.388 9.6 13.08 12 13.08C14.388 13.08 19.164 14.388 19.2 16.776C17.652 19.104 15 20.64 12 20.64Z"
+              ></path>
+            </symbol>
+            <symbol viewBox="0 0 16 16" id="Night">
+              <path
+                d="M13.6587 5.65871V2.34129H10.3413L8 0L5.65871 2.34129H2.34129V5.65871L0 8L2.34129 10.3413V13.6587H5.65871L8 16L10.3413 13.6587H13.6587V10.3413L16 8L13.6587 5.65871ZM8 12.244C7.37047 12.244 6.76923 12.1026 6.23165 11.855C7.68877 11.183 8.70734 9.71176 8.70734 8C8.70734 6.28824 7.68877 4.81698 6.23165 4.145C6.76923 3.89744 7.37047 3.75597 8 3.75597C10.3413 3.75597 12.244 5.65871 12.244 8C12.244 10.3413 10.3413 12.244 8 12.244Z"
+              ></path>
+            </symbol>
+          </svg>
+          <div class="icons">
+            <a href="/" class="logo_sett">
+              <svg class="sett_icon">
+                <use href="#Night"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="icons">
+            <a href="/" class="logo_acc">
+              <svg class="acc_icon">
+                <use href="#AccountCircle"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="icons">
+            <a href="/" class="logo_menu">
+              <svg class="menu_icon">
+                <use href="#menu"></use>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <div class="page">
+        <h1 class="main-title">
+          Discover stays <br />
+          to live, work or just relax
+        </h1>
+        <br />
+        <div class="signatures">
+          <span class="roboto-400 title-page sign">Your destination or hotel name</span>
+          <span class="roboto-400 title-page">Check-in — Check-out</span>
+        </div>
+        <form>
+          <div class="search">
+            <label for="destination"></label>
+            <input
+              id="destination"
+              name="destination"
+              type="text"
+              value="New York"
+              class="value col-s-12 col-md-4"
+            />
+            <div class="date">
+              <div class="date-first">
+                <label for="date-in" class="hidden">Check-in date</label>
+                <input
+                  id="date-in"
+                  name="date"
+                  type="text"
+                  value="Tue 15 Sept"
+                  class="value col-s-12 col-md-12"
+                />
+              </div>
+              <div class="date-second">
+                <label for="date-out" class="hidden">Cheсk-out date</label>
+                <input
+                  id="date-out"
+                  name="date"
+                  type="text"
+                  value="Sat 19 Sept"
+                  class="value col-s-12 col-md-12"
+                />
+              </div>
+            </div>
+            <label for="consist"></label>
+            <input
+              id="consist"
+              name="consist"
+              type="text"
+              value="2 Adults — 0 Children — 1 Room"
+              class="value col-s-12 col-md-2"
+            />
+            <button class="btn-search col-s-12 col-md-2">Search</button>
+          </div>
+        </form>
+        <div class="apps">
+          <img src="./images/google-play-badge.svg" alt="link-google-play" class="google-logo" />
+          <img src="./images/Download_on_the_App_Store.svg" alt="link-app-store" />
+        </div>
+      </div>
+    </main>
+    <section class="advantages container">
+      <div class="adv-title">
+        <h2 class="title">What do we offer</h2>
+      </div>
+      <div class="blocks">
+        <svg width="0" height="0" class="hidden">
+          <symbol
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 68"
+            id="book_online"
+          >
+            <path
+              d="M16.6667 8.99996H91.6667V0.666626H16.6667C12.0833 0.666626 8.33333 4.41663 8.33333 8.99996V54.8333H0V67.3333H58.3333V54.8333H16.6667V8.99996ZM95.8333 17.3333H70.8333C68.5417 17.3333 66.6667 19.2083 66.6667 21.5V63.1666C66.6667 65.4583 68.5417 67.3333 70.8333 67.3333H95.8333C98.125 67.3333 100 65.4583 100 63.1666V21.5C100 19.2083 98.125 17.3333 95.8333 17.3333ZM91.6667 54.8333H75V25.6666H91.6667V54.8333Z"
+              fill="#3077C6"
+            ></path>
+          </symbol>
+          <symbol
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 84 84"
+            id="communicate"
+          >
+            <path
+              d="M54.5 8.66671V37.8334H13.5417L8.66666 42.7084V8.66671H54.5ZM58.6667 0.333374H4.5C2.20833 0.333374 0.333328 2.20837 0.333328 4.50004V62.8334L17 46.1667H58.6667C60.9583 46.1667 62.8333 44.2917 62.8333 42V4.50004C62.8333 2.20837 60.9583 0.333374 58.6667 0.333374ZM79.5 17H71.1667V54.5H17V62.8334C17 65.125 18.875 67 21.1667 67H67L83.6667 83.6667V21.1667C83.6667 18.875 81.7917 17 79.5 17Z"
+              fill="#3077C6"
+            ></path>
+          </symbol>
+          <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 84" id="review">
+            <path
+              d="M83.5 29.3333H57.2083L61.1667 10.2916L61.2917 8.95829C61.2917 7.24996 60.5833 5.66663 59.4583 4.54163L55.0417 0.166626L27.625 27.625C26.0833 29.125 25.1667 31.2083 25.1667 33.5V75.1666C25.1667 79.75 28.9167 83.5 33.5 83.5H71C74.4583 83.5 77.4167 81.4166 78.6667 78.4166L91.25 49.0416C91.625 48.0833 91.8333 47.0833 91.8333 46V37.6666C91.8333 33.0833 88.0833 29.3333 83.5 29.3333ZM83.5 46L71 75.1666H33.5V33.5L51.5833 15.4166L46.9583 37.6666H83.5V46ZM0.166656 33.5H16.8333V83.5H0.166656V33.5Z"
+              fill="#3077C6"
+            ></path>
+          </symbol>
+          <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 92" id="support">
+            <path
+              d="M67.1667 54.3333V71H58.8333V54.3333H67.1667ZM17.1667 54.3333V71H13C10.7083 71 8.83333 69.125 8.83333 66.8333V54.3333H17.1667ZM38 0.166626C17.2917 0.166626 0.5 16.9583 0.5 37.6666V66.8333C0.5 73.75 6.08333 79.3333 13 79.3333H25.5V46H8.83333V37.6666C8.83333 21.5416 21.875 8.49996 38 8.49996C54.125 8.49996 67.1667 21.5416 67.1667 37.6666V46H50.5V79.3333H67.1667V83.5H38V91.8333H63C69.9167 91.8333 75.5 86.25 75.5 79.3333V37.6666C75.5 16.9583 58.7083 0.166626 38 0.166626Z"
+              fill="#3077C6"
+            ></path>
+          </symbol>
+        </svg>
+        <div class="block">
+          <svg class="icon">
+            <use href="#support" />
+          </svg>
+          <span class="text-advantages">Support 24/7</span>
+        </div>
+        <div class="block">
+          <svg class="icon">
+            <use href="#communicate"></use>
+          </svg>
+          <span class="text-advantages">Communicate directly</span>
+        </div>
+        <div class="block">
+          <svg class="icon">
+            <use href="#book_online"></use>
+          </svg>
+          <span class="text-advantages">Book online</span>
+        </div>
+        <div class="block">
+          <svg class="icon">
+            <use href="#review"></use>
+          </svg>
+          <span class="text-advantages">Real guest reviews</span>
+        </div>
+      </div>
+    </section>
+    <section class="homes container">
+      <div class="homes-title-center">
+        <h2 class="homes-title">Homes guests loves</h2>
+      </div>
+      <div class="pictures">
+        <div class="picture">
+          <img class="mini-picture" src="/images/leopold-hotel.png" alt="hotel-leopold" />
+          <span class="hotel-name">Hotel Leopold</span>
+          <span class="hotel-location">Saint Petersburg, Russia</span>
+        </div>
+        <div class="picture right mini">
+          <img class="apartment-photo mini-picture" src="/images/apartment.png" alt="apartment" />
+          <img src="/images/arrow.svg" alt="slider" class="mini-slider" />
+          <span class="hotel-name">Apartment Sunshine</span>
+          <span class="hotel-location">Santa Cruz de Tenerife,<br />Spain</span><br />
+        </div>
+        <div class="picture no-photo">
+          <img src="/images/villa.png" alt="villa" />
+          <span class="hotel-name">Villa Kunerad</span>
+          <span class="hotel-location">Vysokie Tatry, Slowakia</span>
+        </div>
+        <div class="picture right no-photo">
+          <img src="/images/hostel.png" alt="hostel" />
+          <img src="/images/arrow.svg" alt="slider" class="slider" />
+          <span class="hotel-name">Hostel Friendship</span>
+          <span class="hotel-location">Berlin, Germany</span>
+        </div>
+      </div>
+    </section>
+    <section class="destinations container">
+      <span class="destinations-title">The best destinations</span>
+      <div class="tabs">
+        <button class="btn col-md-3 col-s-3">Regions</button>
+        <button class="btn col-md-3 col-s-3">Cities</button>
+        <button class="btn col-md-6 col-s-3">
+          Places <span class="disappear">of interest</span>
+        </button>
+      </div>
+      <div class="regions">
+        <div class="region">
+          <div class="black-square">
+            <img src="./images/maldives.png" alt="maldives" class="photo-destinations" />
+          </div>
+          <div class="btn-block">
+            <button class="btn-book">Book now</button>
+          </div>
+          <span class="photo-destinations-title">Maldives</span>
+        </div>
+        <div class="region">
+          <div class="black-square">
+            <img src="./images/spain.png" alt="spain" class="photo-destinations" />
+            <img src="/images/arrow.svg" alt="slider" class="mini-slider" />
+          </div>
+          <div class="btn-block">
+            <button class="btn-book">Book now</button>
+          </div>
+          <span class="photo-destinations-title">Spain</span>
+        </div>
+        <div class="region disappear">
+          <div class="black-square">
+            <img src="./images/norway.png" alt="norway" class="photo-destinations" />
+          </div>
+          <div class="btn-block">
+            <button class="btn-book">Book now</button>
+          </div>
+          <span class="photo-destinations-title">Norway</span>
+        </div>
+        <div class="region disappear">
+          <div class="black-square">
+            <img src="./images/island.png" alt="island" class="photo-destinations" />
+          </div>
+          <div class="btn-block">
+            <button class="btn-book">Book now</button>
+          </div>
+          <span class="photo-destinations-title">Island</span>
+        </div>
+      </div>
+      <div class="slider-down disappear">
+        <img class="arrow-down" src="/images/arrow-down.svg" alt="slider" />
+      </div>
+    </section>
+    <section class="sign-up container">
+      <div class="sign_up">
+        <div class="wrapper-sign-up">
+          <img src="./images/user.svg" alt="user" class="user-icon" />
+          <div class="signing">
+            <span class="sign-text">Sign up and get 20% off your first booking</span>
+            <br />
+            <button class="sign-btn">Sign up</button>
+          </div>
+        </div>
+        <div class="wrapper-close-icon">
+          <img src="./images/close.svg" alt="close" class="close-icon" />
+        </div>
+      </div>
+    </section>
+    <section class="reviews-main container">
+      <svg display="none">
+        <defs>
+          <g id="img-score-8:9">
+            <rect xmlns="http://www.w3.org/2000/svg" width="48" height="32" fill="#10367C" rx="8" />
+            <path
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              d="M16.1328 9.9834C17.3516 9.9834 18.3154 10.2646 19.0244 10.8271C19.7334 11.3838 20.0879 12.1309 20.0879 13.0684C20.0879 14.3867 19.2969 15.4355 17.7148 16.2148C18.7227 16.7188 19.4375 17.249 19.8594 17.8057C20.2871 18.3623 20.501 18.9834 20.501 19.6689C20.501 20.7295 20.1113 21.5791 19.332 22.2178C18.5527 22.8564 17.498 23.1758 16.168 23.1758C14.7734 23.1758 13.6924 22.877 12.9248 22.2793C12.1572 21.6816 11.7734 20.835 11.7734 19.7393C11.7734 19.0244 11.9727 18.3828 12.3711 17.8145C12.7754 17.2402 13.4346 16.7305 14.3486 16.2852C13.5635 15.8164 13.0039 15.3213 12.6699 14.7998C12.3359 14.2783 12.1689 13.6924 12.1689 13.042C12.1689 12.1104 12.5352 11.3691 13.2676 10.8184C14 10.2617 14.9551 9.9834 16.1328 9.9834ZM13.751 19.6689C13.751 20.2783 13.9648 20.7529 14.3926 21.0928C14.8203 21.4268 15.4004 21.5938 16.1328 21.5938C16.8887 21.5938 17.4746 21.4209 17.8906 21.0752C18.3125 20.7236 18.5234 20.249 18.5234 19.6514C18.5234 19.1768 18.3301 18.7432 17.9434 18.3506C17.5566 17.958 16.9707 17.5947 16.1855 17.2607L15.9307 17.1465C15.1572 17.4863 14.6006 17.8613 14.2607 18.2715C13.9209 18.6758 13.751 19.1416 13.751 19.6689ZM16.1152 11.5742C15.5293 11.5742 15.0576 11.7207 14.7002 12.0137C14.3428 12.3008 14.1641 12.6934 14.1641 13.1914C14.1641 13.4961 14.2285 13.7686 14.3574 14.0088C14.4863 14.249 14.6738 14.4688 14.9199 14.668C15.166 14.8613 15.582 15.0957 16.168 15.3711C16.8711 15.0605 17.3662 14.7354 17.6533 14.3955C17.9463 14.0498 18.0928 13.6484 18.0928 13.1914C18.0928 12.6934 17.9111 12.3008 17.5479 12.0137C17.1904 11.7207 16.7129 11.5742 16.1152 11.5742ZM24.9043 21.1104C24.623 22.2002 24.1074 23.6035 23.3574 25.3203H21.8369C22.2412 23.7383 22.543 22.2676 22.7422 20.9082H24.7725L24.9043 21.1104ZM35.583 15.6348C35.583 18.166 35.0732 20.0557 34.0537 21.3037C33.0342 22.5518 31.499 23.1758 29.4482 23.1758C28.6689 23.1758 28.1094 23.1289 27.7695 23.0352V21.3037C28.291 21.4502 28.8154 21.5234 29.3428 21.5234C30.7373 21.5234 31.7773 21.1484 32.4629 20.3984C33.1484 19.6484 33.5234 18.4707 33.5879 16.8652H33.4824C33.1367 17.3926 32.7178 17.7734 32.2256 18.0078C31.7393 18.2422 31.168 18.3594 30.5117 18.3594C29.375 18.3594 28.4814 18.0049 27.8311 17.2959C27.1807 16.5869 26.8555 15.6143 26.8555 14.3779C26.8555 13.0361 27.2305 11.9697 27.9805 11.1787C28.7363 10.3818 29.7646 9.9834 31.0654 9.9834C31.9795 9.9834 32.7764 10.2061 33.4561 10.6514C34.1357 11.0967 34.6602 11.7441 35.0293 12.5938C35.3984 13.4375 35.583 14.4512 35.583 15.6348ZM31.1006 11.6973C30.3857 11.6973 29.8379 11.9316 29.457 12.4004C29.0762 12.8633 28.8857 13.5166 28.8857 14.3604C28.8857 15.0928 29.0615 15.6699 29.4131 16.0918C29.7705 16.5078 30.3096 16.7158 31.0303 16.7158C31.7275 16.7158 32.3135 16.5078 32.7881 16.0918C33.2627 15.6758 33.5 15.1895 33.5 14.6328C33.5 14.1113 33.3975 13.625 33.1924 13.1738C32.9932 12.7168 32.7119 12.3564 32.3486 12.0928C31.9854 11.8291 31.5693 11.6973 31.1006 11.6973Z"
+            />
+          </g>
+          <g id="img-score-9:1">
+            <rect xmlns="http://www.w3.org/2000/svg" width="48" height="32" fill="#10367C" rx="8" />
+            <path
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              d="M20.4834 15.6348C20.4834 18.166 19.9736 20.0557 18.9541 21.3037C17.9346 22.5518 16.3994 23.1758 14.3486 23.1758C13.5693 23.1758 13.0098 23.1289 12.6699 23.0352V21.3037C13.1914 21.4502 13.7158 21.5234 14.2432 21.5234C15.6377 21.5234 16.6777 21.1484 17.3633 20.3984C18.0488 19.6484 18.4238 18.4707 18.4883 16.8652H18.3828C18.0371 17.3926 17.6182 17.7734 17.126 18.0078C16.6396 18.2422 16.0684 18.3594 15.4121 18.3594C14.2754 18.3594 13.3818 18.0049 12.7314 17.2959C12.0811 16.5869 11.7559 15.6143 11.7559 14.3779C11.7559 13.0361 12.1309 11.9697 12.8809 11.1787C13.6367 10.3818 14.665 9.9834 15.9658 9.9834C16.8799 9.9834 17.6768 10.2061 18.3564 10.6514C19.0361 11.0967 19.5605 11.7441 19.9297 12.5938C20.2988 13.4375 20.4834 14.4512 20.4834 15.6348ZM16.001 11.6973C15.2861 11.6973 14.7383 11.9316 14.3574 12.4004C13.9766 12.8633 13.7861 13.5166 13.7861 14.3604C13.7861 15.0928 13.9619 15.6699 14.3135 16.0918C14.6709 16.5078 15.21 16.7158 15.9307 16.7158C16.6279 16.7158 17.2139 16.5078 17.6885 16.0918C18.1631 15.6758 18.4004 15.1895 18.4004 14.6328C18.4004 14.1113 18.2979 13.625 18.0928 13.1738C17.8936 12.7168 17.6123 12.3564 17.249 12.0928C16.8857 11.8291 16.4697 11.6973 16.001 11.6973ZM24.9043 21.1104C24.623 22.2002 24.1074 23.6035 23.3574 25.3203H21.8369C22.2412 23.7383 22.543 22.2676 22.7422 20.9082H24.7725L24.9043 21.1104ZM32.9551 23H30.8896V14.7031C30.8896 13.7129 30.9131 12.9277 30.96 12.3477C30.8252 12.4883 30.6582 12.6436 30.459 12.8135C30.2656 12.9834 29.6094 13.5225 28.4902 14.4307L27.4531 13.1211L31.2324 10.1504H32.9551V23Z"
+            />
+          </g>
+          <g id="img-score-9:4">
+            <rect xmlns="http://www.w3.org/2000/svg" width="48" height="32" fill="#10367C" rx="8" />
+            <path
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              d="M20.4834 15.6348C20.4834 18.166 19.9736 20.0557 18.9541 21.3037C17.9346 22.5518 16.3994 23.1758 14.3486 23.1758C13.5693 23.1758 13.0098 23.1289 12.6699 23.0352V21.3037C13.1914 21.4502 13.7158 21.5234 14.2432 21.5234C15.6377 21.5234 16.6777 21.1484 17.3633 20.3984C18.0488 19.6484 18.4238 18.4707 18.4883 16.8652H18.3828C18.0371 17.3926 17.6182 17.7734 17.126 18.0078C16.6396 18.2422 16.0684 18.3594 15.4121 18.3594C14.2754 18.3594 13.3818 18.0049 12.7314 17.2959C12.0811 16.5869 11.7559 15.6143 11.7559 14.3779C11.7559 13.0361 12.1309 11.9697 12.8809 11.1787C13.6367 10.3818 14.665 9.9834 15.9658 9.9834C16.8799 9.9834 17.6768 10.2061 18.3564 10.6514C19.0361 11.0967 19.5605 11.7441 19.9297 12.5938C20.2988 13.4375 20.4834 14.4512 20.4834 15.6348ZM16.001 11.6973C15.2861 11.6973 14.7383 11.9316 14.3574 12.4004C13.9766 12.8633 13.7861 13.5166 13.7861 14.3604C13.7861 15.0928 13.9619 15.6699 14.3135 16.0918C14.6709 16.5078 15.21 16.7158 15.9307 16.7158C16.6279 16.7158 17.2139 16.5078 17.6885 16.0918C18.1631 15.6758 18.4004 15.1895 18.4004 14.6328C18.4004 14.1113 18.2979 13.625 18.0928 13.1738C17.8936 12.7168 17.6123 12.3564 17.249 12.0928C16.8857 11.8291 16.4697 11.6973 16.001 11.6973ZM24.9043 21.1104C24.623 22.2002 24.1074 23.6035 23.3574 25.3203H21.8369C22.2412 23.7383 22.543 22.2676 22.7422 20.9082H24.7725L24.9043 21.1104ZM36.0576 20.1963H34.3262V23H32.3135V20.1963H26.4424V18.6055L32.3135 10.1152H34.3262V18.4824H36.0576V20.1963ZM32.3135 18.4824V15.2568C32.3135 14.1084 32.3428 13.168 32.4014 12.4355H32.3311C32.167 12.8223 31.9092 13.291 31.5576 13.8418L28.3672 18.4824H32.3135Z"
+            />
+          </g>
+        </defs>
+      </svg>
+      <h2 class="reviews-title">Guests reviews</h2>
+      <h2 class="reviews-title-mini">Reviews</h2>
+      <div class="reviews">
+        <div class="review col-md-4">
+          <div class="photo-caption">
+            <img src="./images/resort.png" alt="resort" class="photo" />
+            <div class="field">
+              <span class="price">From 250 USD</span>
+            </div>
+          </div>
+          <div class="resort-exposition">
+            <div class="resort-caption">
+              <span class="resort-name">Ubud Bali Resort&SPA</span>
+              <span class="resort-location">Bali, Indonesia</span>
+            </div>
+            <div class="score">
+              <svg
+                width="48"
+                height="32"
+                viewBox="0 0 48 32"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMinYMin"
+              >
+                <use xlink:href="#img-score-9:4"></use>
+              </svg>
+              <span class="amount-reviews">1324 reviews</span>
+            </div>
+          </div>
+          <div class="user">
+            <svg class="for-review">
+              <use href="#AccountCircle"></use>
+            </svg>
+            <div class="username">
+              <span class="name">Hanna Ivanova</span>
+              <div class="country">
+                <img src="./images/ukraine.png" alt="ukraine-flag" class="flag" /><span
+                  class="country-name"
+                  >Ukraine</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="text-review">
+            Great location, really pleasant and clean rooms, but the thing that makes this such a
+            good place to stay are the staff. All of the people are incredibly helpful and generous
+            with their time and advice.
+          </div>
+        </div>
+        <div class="review col-md-4">
+          <div class="photo-caption">
+            <img src="./images/hostel.png" alt="hostel" class="photo" />
+            <div class="field">
+              <span class="price">From 40 USD</span>
+            </div>
+          </div>
+          <div class="resort-exposition">
+            <div class="resort-caption">
+              <span class="resort-name">King Kong Hostel</span>
+              <span class="resort-location">Rotterdam, Netherlands</span>
+            </div>
+            <div class="score">
+              <svg
+                width="48"
+                height="32"
+                viewBox="0 0 48 32"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMinYMin"
+                class="grade"
+              >
+                <use xlink:href="#img-score-8:9"></use>
+              </svg>
+              <span class="amount-reviews">2016 reviews</span>
+            </div>
+          </div>
+          <div class="user">
+            <svg class="for-review">
+              <use href="#AccountCircle"></use>
+            </svg>
+            <div class="username">
+              <span class="name">Adam Smith</span>
+              <div class="country">
+                <img src="./images/usa.png" alt="usa-flag" class="flag" /><span class="country-name"
+                  >USA</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="text-review">
+            I've been in this hostel for a month and here is the best hostel of all Excellent
+            management of excellent and ethical staff and bedrooms Bathrooms are always clean and
+            excellent Most importantly, those who work here are kind and good-natured.
+          </div>
+        </div>
+        <div class="review col-md-4">
+          <div class="photo-caption">
+            <img src="./images/hotel.png" alt="hotel" class="photo" />
+            <img src="/images/arrow.svg" alt="slider" class="slider-review" />
+            <div class="field">
+              <span class="price">From 100 USD</span>
+            </div>
+          </div>
+          <div class="resort-exposition">
+            <div class="resort-caption">
+              <span class="resort-name">Rokoko Hotel</span>
+              <span class="resort-location">Ourika, Marocco</span>
+            </div>
+            <div class="score">
+              <svg
+                width="48"
+                height="32"
+                viewBox="0 0 48 32"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMinYMin"
+                class="grade"
+              >
+                <use xlink:href="#img-score-9:1"></use>
+              </svg>
+              <span class="amount-reviews">815 reviews</span>
+            </div>
+          </div>
+          <div class="user">
+            <svg class="for-review">
+              <use href="#AccountCircle"></use>
+            </svg>
+            <div class="username">
+              <span class="name">Anika Messer</span>
+              <div class="country">
+                <img src="./images/germany.png" alt="germany-flag" class="flag" /><span
+                  class="country-name"
+                  >Germany</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="text-review">
+            Efficient, friendly, professional, and appropriately attentive. Great hotel in a great
+            location. Easy access to all the surrounding historical sites. Staff is fantastic. Will
+            definitely stay at this location during my next stay in Marocco.
+          </div>
+        </div>
+        <img src="./images/navigation.svg" alt="navigation" class="navigation" />
+      </div>
+    </section>
+    <footer class="container">
+      <div class="logotype">
+        <img src="/images/triphouse-logo-white.svg" alt="logo" />
+      </div>
+      <div class="main">
+        <div class="about">
+          <a href="/"><span class="text-bold">About</span></a>
+          <a href="/"><span class="text">How Triphouse works</span></a>
+          <a href="/"><span class="text">Careers</span></a>
+          <a href="/"><span class="text">Privacy</span></a>
+          <a href="/"><span class="text">Terms</span></a>
+        </div>
+        <div class="property">
+          <a href="/"><span class="text-bold">Property types</span></a>
+          <a href="/"><span class="text">Guests houses</span></a>
+          <a href="/"><span class="text">Hotels</span></a>
+          <a href="/"><span class="text">Apartments</span></a>
+          <a href="/"><span class="text">Villas</span></a>
+          <a href="/"><span class="text">Holiday homes</span></a>
+          <a href="/"><span class="text">Hostels</span></a>
+        </div>
+        <div class="support">
+          <a href="/"><span class="text-bold">Support</span></a>
+          <a href="/"><span class="text">Contact Customer Service</span></a>
+          <a href="/"><span class="text">FAQ</span></a>
+        </div>
+      </div>
+      <div class="company">
+        <span class="document">&copy; 2020 Triphouse, Inc. All right reserved</span>
+      </div>
+    </footer>
+  </body>
+</html>
