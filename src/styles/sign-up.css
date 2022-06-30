@@ -1,0 +1,59 @@
+.sign_up {
+  background-color: #eaf0f9;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.wrapper-sign-up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-icon {
+  width: 86px;
+  height: 86px;
+  margin-right: 24px;
+}
+
+.signing {
+  padding-top: 6px;
+}
+
+.sign-text {
+  color: #383838;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sign-btn {
+  width: 128px;
+  height: 48px;
+  color: #3077c6;
+  font-size: 18px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #3077c6;
+  margin-top: 21px;
+}
+
+.close-icon {
+  width: 26px;
+  height: 26px;
+  padding-top: 24px;
+}
+
+.wrapper-close-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+  .sign-up {
+    display: none;
+  }
+}

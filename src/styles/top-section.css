@@ -1,0 +1,384 @@
+body {
+  margin: 0;
+  height: 100vh;
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.container {
+  padding-right: 104px;
+  padding-left: 104px;
+}
+
+main {
+  background-image: url("../images/castelmezzano.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header.top-section {
+  height: 46px;
+  padding-top: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.roboto-400 {
+  color: #ffffff;
+}
+
+.title-header {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.words {
+  margin-right: 48px;
+}
+
+.words a {
+  text-decoration: none;
+  padding: 12px;
+}
+
+.words a:hover {
+  border-bottom: 4px solid #f5bd41;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo_sett {
+  margin-right: 24px;
+}
+
+.sett_icon {
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+}
+
+.acc_icon {
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+}
+
+.menu_icon {
+  display: none;
+}
+
+.logo_sett svg:hover {
+  fill: #f5bd41;
+}
+
+.logo_acc svg:hover {
+  fill: #f5bd41;
+}
+
+.page {
+  margin-top: 196px;
+}
+
+.main-title {
+  font-weight: 500;
+  font-size: 50px;
+  color: white;
+}
+
+.signatures {
+  margin-top: 100px;
+  margin-left: 24px;
+  margin-bottom: 24px;
+}
+
+.title-page {
+  font-size: 18px;
+}
+
+.sign {
+  margin-right: 150px;
+}
+
+.search {
+  margin-bottom: 120px;
+  background-color: #f3f3f4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  height: 58px;
+  border: none;
+  border-radius: 8px;
+}
+
+.date-first,
+.date-second {
+  width: 50%;
+  position: relative;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+}
+
+.value {
+  font-size: 18px;
+  color: #383838;
+  padding-left: 24px;
+}
+
+input.value:focus {
+  outline: none;
+  border: 3px solid #f5bd41;
+}
+
+button {
+  height: 64px;
+  border: none;
+  background: #3077c6;
+  color: white;
+}
+
+.btn-search {
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #f3f3f4;
+  color: #383838;
+  border-radius: 8px;
+}
+
+button.btn-search:hover {
+  background-color: #3077c6;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.apps {
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.google-logo {
+  margin-right: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 783px) {
+  .col-md-1 {
+    width: 8.33%;
+  }
+
+  .col-md-2 {
+    width: 16.66%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-4 {
+    width: 33.33%;
+  }
+
+  .col-md-5 {
+    width: 41.66%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-7 {
+    width: 58.33%;
+  }
+
+  .col-md-8 {
+    width: 66.66%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-10 {
+    width: 83.33%;
+  }
+
+  .col-md-11 {
+    width: 91.66%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 783px) {
+  .col-s-1 {
+    width: 8.33%;
+  }
+
+  .col-s-2 {
+    width: 16.66%;
+  }
+
+  .col-s-3 {
+    width: 25%;
+  }
+
+  .col-s-4 {
+    width: 33.33%;
+  }
+
+  .col-s-5 {
+    width: 41.66%;
+  }
+
+  .col-s-6 {
+    width: 50%;
+  }
+
+  .col-s-7 {
+    width: 58.33%;
+  }
+
+  .col-s-8 {
+    width: 66.66%;
+  }
+
+  .col-s-9 {
+    width: 75%;
+  }
+
+  .col-s-10 {
+    width: 83.33%;
+  }
+
+  .col-s-11 {
+    width: 91.66%;
+  }
+
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 783px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .words {
+    display: none;
+    margin-right: 0;
+  }
+
+  .hidden {
+    display: flex;
+    margin-bottom: -20px;
+    color: #383838;
+    font-size: 12px;
+    position: absolute;
+    padding: 6px 0 4px 24px;
+  }
+
+  .title-header {
+    display: none;
+  }
+
+  .logo_acc {
+    margin-right: 16px;
+  }
+
+  .logo_sett {
+    margin-right: 16px;
+  }
+
+  .menu_icon {
+    display: flex;
+    width: 24px;
+    height: 16px;
+    fill: #ffffff;
+  }
+
+  .menu_icon svg:hover {
+    fill: #f5bd41;
+  }
+
+  .main-title {
+    font-size: 30px;
+  }
+
+  .title-page {
+    display: none;
+  }
+
+  .signatures {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .page {
+    margin-top: 52px;
+  }
+
+  .search {
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    background-color: #f5bd41;
+    border: 4px solid #f5bd41;
+    padding: 4px;
+  }
+
+  .value {
+    font-size: 15px;
+    padding-left: 24px;
+    margin-bottom: 8px;
+  }
+
+  .date {
+    width: 100%;
+  }
+
+  .date-first {
+    margin-right: 8px;
+  }
+
+  .btn-search {
+    font-size: 19px;
+    background-color: #f3f3f4;
+    color: #383838;
+    border-radius: 8px;
+  }
+
+  button.btn-search:hover {
+    background-color: #3077c6;
+    color: #ffffff;
+    border-radius: 8px;
+  }
+
+  .apps {
+    padding-bottom: 40px;
+  }
+}
