@@ -76,3 +76,75 @@ data.forEach((item) => {
               </div>
       `;
 });
+
+// eslint-disable-next-line no-undef
+$(document).ready(function () {
+  // eslint-disable-next-line no-undef
+  $('.pictures').slick({
+    arrows: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  });
+});
+
+function viewDiv() {
+  document.getElementById('consist-form').style.display = 'block';
+}
+viewDiv()
+
+function viewSelect() {
+  document.getElementById('age-selector').style.display = 'block';
+}
+viewSelect()
+
+const plusButtonRooms = document.getElementById('button-plus-rooms');
+const minusButtonRooms = document.getElementById('button-minus-rooms');
+const numberRooms = document.getElementById('number-rooms');
+const spanNumberRooms = document.getElementById('span-number-rooms');
+
+plusButtonRooms.onclick = function () {
+  numberRooms.textContent = (parseInt(numberRooms.textContent) + 1).toString();
+  spanNumberRooms.textContent = (parseInt(spanNumberRooms.textContent) + 1).toString();
+  return false;
+};
+
+minusButtonRooms.onclick = function () {
+  numberRooms.textContent = (parseInt(numberRooms.textContent) - 1).toString();
+  spanNumberRooms.textContent = (parseInt(spanNumberRooms.textContent) - 1).toString();
+  return false;
+};
+
+const plusButtonChild = document.getElementById('button-plus-сhildren');
+const minusButtonChild = document.getElementById('button-minus-сhildren');
+const numberChild = document.getElementById('number-children');
+const spanNumberChildren = document.getElementById('span-number-children');
+
+plusButtonChild.onclick = function () {
+  numberChild.textContent = (parseInt(numberChild.textContent) + 1).toString();
+  spanNumberChildren.textContent = (parseInt(spanNumberChildren.textContent) + 1).toString();
+  return false;
+};
+
+minusButtonChild.onclick = function () {
+  numberChild.textContent = (parseInt(numberChild.textContent) - 1).toString();
+  spanNumberChildren.textContent = (parseInt(spanNumberChildren.textContent) - 1).toString();
+  return false;
+};
+
+const plusButtonAdult = document.getElementById('button-plus-adult');
+const minusButtonAdult = document.getElementById('button-minus-adult');
+const numberAdult = document.getElementById('number-adult');
+const spanNumberAdults = document.getElementById('span-number-adults');
+
+plusButtonAdult.onclick = function () {
+  numberAdult.textContent = (parseInt(numberAdult.textContent) + 1).toString();
+  spanNumberAdults.textContent = (parseInt(spanNumberAdults.textContent) + 1).toString();
+  return false;
+};
+
+minusButtonAdult.onclick = function () {
+  numberAdult.textContent = (parseInt(numberAdult.textContent) - 1).toString();
+  spanNumberAdults.textContent = (parseInt(spanNumberAdults.textContent) - 1).toString();
+  return false;
+};

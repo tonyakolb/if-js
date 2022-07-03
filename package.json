@@ -29,5 +29,9 @@
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
     "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "slick-carousel": "^1.8.1"
   }
 }

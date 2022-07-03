@@ -1,23 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="my first works" />
-    <meta name="keywords" content="HTML,JS" />
-    <meta name="author" content="Tonya Kolb" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="src/styles/homes.css" rel="stylesheet" />
-    <link href="src/styles/fonts.css" rel="stylesheet" />
-    <link href="src/styles/top-section.css" rel="stylesheet" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="my first works"/>
+    <meta name="keywords" content="HTML,JS"/>
+    <meta name="author" content="Tonya Kolb"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="src/styles/homes.css" rel="stylesheet"/>
+    <link href="src/styles/fonts.css" rel="stylesheet"/>
+    <link href="src/styles/top-section.css" rel="stylesheet"/>
     <title>Title</title>
-  </head>
-  <body>
-    <section class="homes container">
-      <div class="homes-title-center">
+</head>
+<body>
+<main class="container">
+    <header class="top-section">
+        <div>
+            <img src="/src/images/logo_triphouse.svg" alt="triphouse_logo"/>
+        </div>
+        <nav>
+            <div class="words">
+                <a href="/"><span class="roboto-400 title-header">Stays</span></a>
+                <a href="/"><span class="roboto-400 title-header">Attractions</span></a>
+            </div>
+            <svg width="0" height="0" class="hidden">
+                <symbol viewBox="0 0 24 16" id="menu">
+                    <path
+                            d="M0 16H24V13.3333H0V16ZM0 9.33333H24V6.66667H0V9.33333ZM0 0V2.66667H24V0H0Z"
+                    ></path>
+                </symbol>
+                <symbol viewBox="0 0 24 24" id="AccountCircle">
+                    <path
+                            d="M12 0C5.376 0 0 5.376 0 12C0 18.624 5.376 24 12 24C18.624 24 24 18.624 24 12C24 5.376 18.624 0 12 0ZM12 3.6C13.992 3.6 15.6 5.208 15.6 7.2C15.6 9.192 13.992 10.8 12 10.8C10.008 10.8 8.4 9.192 8.4 7.2C8.4 5.208 10.008 3.6 12 3.6ZM12 20.64C9 20.64 6.348 19.104 4.8 16.776C4.836 14.388 9.6 13.08 12 13.08C14.388 13.08 19.164 14.388 19.2 16.776C17.652 19.104 15 20.64 12 20.64Z"
+                    ></path>
+                </symbol>
+                <symbol viewBox="0 0 16 16" id="Night">
+                    <path
+                            d="M13.6587 5.65871V2.34129H10.3413L8 0L5.65871 2.34129H2.34129V5.65871L0 8L2.34129 10.3413V13.6587H5.65871L8 16L10.3413 13.6587H13.6587V10.3413L16 8L13.6587 5.65871ZM8 12.244C7.37047 12.244 6.76923 12.1026 6.23165 11.855C7.68877 11.183 8.70734 9.71176 8.70734 8C8.70734 6.28824 7.68877 4.81698 6.23165 4.145C6.76923 3.89744 7.37047 3.75597 8 3.75597C10.3413 3.75597 12.244 5.65871 12.244 8C12.244 10.3413 10.3413 12.244 8 12.244Z"
+                    ></path>
+                </symbol>
+            </svg>
+            <div class="icons">
+                <a href="/" class="logo_sett">
+                    <svg class="sett_icon">
+                        <use href="#Night"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="icons">
+                <a href="/" class="logo_acc">
+                    <svg class="acc_icon">
+                        <use href="#AccountCircle"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="icons">
+                <a href="/" class="logo_menu">
+                    <svg class="menu_icon">
+                        <use href="#menu"></use>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="page">
+        <h1 class="main-title">
+            Discover stays <br/>
+            to live, work or just relax
+        </h1>
+        <br/>
+        <div class="signatures">
+            <span class="roboto-400 title-page sign">Your destination or hotel name</span>
+            <span class="roboto-400 title-page">Check-in — Check-out</span>
+        </div>
+        <form>
+            <div class="search">
+                <label for="destination"></label>
+                <input
+                        id="destination"
+                        name="destination"
+                        type="text"
+                        value="New York"
+                        class="value col-s-12 col-md-4"
+                />
+                <div class="date">
+                    <div class="date-first ">
+                        <label for="date-in" class="hidden">Check-in date</label>
+                        <input
+                                id="date-in"
+                                name="date"
+                                type="text"
+                                value="Tue 15 Sept"
+                                class="value col-s-12 col-md-10"
+                        />
+                    </div>
+                    <div class="date-second">
+                        <label for="date-out" class="hidden">Cheсk-out date</label>
+                        <input
+                                id="date-out"
+                                name="date"
+                                type="text"
+                                value="Sat 19 Sept"
+                                class="value col-s-12 col-md-10"
+                        />
+                    </div>
+                </div>
+                <div id="consist" class="consist col-s-12 col-md-5" onmousedown="viewDiv()">
+                    <div class="consist-text">
+                        <span id="span-number-adults">2 </span> Adults -
+                        <span id="span-number-children">0 </span> Children -
+                        <span id="span-number-rooms">1 </span> Room
+                    </div>
+                    <div id="consist-form" class="consist-form">
+                        <div class="consist-form-elements">
+                            <div class="consist-form-element"><p>Adults</p></div>
+                            <div class="adults">
+                                <button id="button-minus-adult" class="button minus">-</button>
+                                <span id="number-adult" class="number">2</span>
+                                <button id="button-plus-adult" class="button plus">+</button>
+                            </div>
+                        </div>
+                        <div class="consist-form-elements">
+                            <div class="consist-form-element"><p>Children</p></div>
+                            <div class="children">
+                                <button id="button-minus-сhildren" class="button minus">-</button>
+                                <span id="number-children" class="number" >0</span>
+                                <button id="button-plus-сhildren" class="button plus" onmousedown="viewSelect()">+</button>
+                            </div>
+                        </div>
+                        <div class="consist-form-elements">
+                            <div class="consist-form-element"><p>Rooms</p></div>
+                            <div class="rooms">
+                                <button id="button-minus-rooms" class="button minus">-</button>
+                                <span id="number-rooms" class="number">1</span>
+                                <button id="button-plus-rooms" class="button plus">+</button>
+                            </div>
+                        </div>
+                        <div id="age-selector" class="age-selector">
+                            <span>What is the age of the child you're travelling with? </span><br/>
+                            <label for="kids-age"></label>
+                            <select name="kids-age" id="kids-age">
+                                <option value="0">0 years old</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-search col-s-12 col-md-2">Search</button>
+            </div>
+        </form>
+        <div class="apps">
+            <img src="/src/images/google-play-badge.svg" alt="link-google-play" class="google-logo"/>
+            <img src="/src/images/Download_on_the_App_Store.svg" alt="link-app-store"/>
+        </div>
+    </div>
+</main>
+<section class="homes container">
+    <div class="homes-title-center">
         <h2 class="homes-title">Homes guests loves</h2>
-      </div>
-        <div class="pictures" id="content"></div>
-    </section>
-  </body>
-  <script src="/src/js/main.js"></script>
+    </div>
+    <div class="pictures" id="content"></div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/src/js/slick.min.js"></script>
+</body>
+<script src="/src/js/main.js"></script>
 </html>
