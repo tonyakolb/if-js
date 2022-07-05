@@ -73,14 +73,14 @@
             <span class="roboto-400 title-page">Check-in — Check-out</span>
         </div>
         <form>
-            <div class="search">
+            <div class="search col-md-10">
                 <label for="destination"></label>
                 <input
                         id="destination"
                         name="destination"
                         type="text"
                         value="New York"
-                        class="value col-s-12 col-md-4"
+                        class="value col-s-12 col-md-5"
                 />
                 <div class="date">
                     <div class="date-first ">
@@ -104,64 +104,65 @@
                         />
                     </div>
                 </div>
-                <div id="consist" class="consist col-s-12 col-md-5" onmousedown="viewDiv()">
+                <div id="consist" class="consist col-s-12 col-md-5" onclick="toggle()">
                     <div class="consist-text">
                         <span id="span-number-adults">2 </span> Adults -
-                        <span id="span-number-children">0 </span> Children -
+                        <span id="span-number-child">0 </span> Children -
                         <span id="span-number-rooms">1 </span> Room
                     </div>
-                    <div id="consist-form" class="consist-form">
-                        <div class="consist-form-elements">
-                            <div class="consist-form-element"><p>Adults</p></div>
-                            <div class="adults">
-                                <button id="button-minus-adult" class="button minus">-</button>
-                                <span id="number-adult" class="number">2</span>
-                                <button id="button-plus-adult" class="button plus">+</button>
-                            </div>
-                        </div>
-                        <div class="consist-form-elements">
-                            <div class="consist-form-element"><p>Children</p></div>
-                            <div class="children">
-                                <button id="button-minus-сhildren" class="button minus">-</button>
-                                <span id="number-children" class="number" >0</span>
-                                <button id="button-plus-сhildren" class="button plus" onmousedown="viewSelect()">+</button>
-                            </div>
-                        </div>
-                        <div class="consist-form-elements">
-                            <div class="consist-form-element"><p>Rooms</p></div>
-                            <div class="rooms">
-                                <button id="button-minus-rooms" class="button minus">-</button>
-                                <span id="number-rooms" class="number">1</span>
-                                <button id="button-plus-rooms" class="button plus">+</button>
-                            </div>
-                        </div>
-                        <div id="age-selector" class="age-selector">
-                            <span>What is the age of the child you're travelling with? </span><br/>
-                            <label for="kids-age"></label>
-                            <select name="kids-age" id="kids-age">
-                                <option value="0">0 years old</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                            </select>
-                        </div>
-                    </div>
+
                 </div>
                 <button class="btn-search col-s-12 col-md-2">Search</button>
+            </div>
+            <div id="consist-form" style="display:none" class="consist-form">
+                <div class="consist-form-elements">
+                    <div class="consist-form-element"><p>Adults</p></div>
+                    <div class="adults">
+                        <button id="button-minus-adult" class="button minus" disabled="disabled">-</button>
+                        <span id="number-adult" class="number">1</span>
+                        <button id="button-plus-adult" class="button plus">+</button>
+                    </div>
+                </div>
+                <div class="consist-form-elements">
+                    <div class="consist-form-element"><p>Children</p></div>
+                    <div class="children">
+                        <button id="button-minus-child" class="button minus" disabled="disabled">-</button>
+                        <span id="number-child" class="number">0</span>
+                        <button id="button-plus-child" class="button plus">+</button>
+                    </div>
+                </div>
+                <div class="consist-form-elements">
+                    <div class="consist-form-element"><p>Rooms</p></div>
+                    <div class="rooms">
+                        <button id="button-minus-rooms" class="button minus" disabled="disabled">-</button>
+                        <span id="number-rooms" class="number">1</span>
+                        <button id="button-plus-rooms" class="button plus">+</button>
+                    </div>
+                </div>
+                <div id="age-selector" class="age-selector">
+                    <span id="age-question" class="age-question" style="display:none">What is the age of the child you're travelling with? </span><br/>
+                    <label for="kids-age"></label>
+                    <select name="kids-age" style="display:none" id="kids-age">
+                        <option value="0">0 years old</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                    </select>
+                </div>
             </div>
         </form>
         <div class="apps">

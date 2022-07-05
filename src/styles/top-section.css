@@ -114,11 +114,12 @@ nav {
 }
 
 .search {
-    margin-bottom: 120px;
+    position: absolute;
     background-color: #f3f3f4;
     border-radius: 8px;
     display: flex;
     align-items: center;
+    max-height: 64px;
 }
 
 input, .consist {
@@ -171,6 +172,7 @@ button.btn-search:hover {
 }
 
 .apps {
+    margin-top: 208px;
     padding-bottom: 120px;
     display: flex;
     justify-content: center;
@@ -184,10 +186,6 @@ button.btn-search:hover {
     display: none;
 }
 
-#consist-form {
-    display: none;
-}
-
 .consist {
     background-color: white;
     display: flex;
@@ -196,26 +194,18 @@ button.btn-search:hover {
     padding: 0;
 }
 
-.consist-text{
-    display: flex;
-    flex-wrap: nowrap ;
-    flex-direction: row;
-}
-
 .consist-form {
     background-color: white;
     position: relative;
-    top: 140px;
-    left: -20px;
+    top: 76px;
+    right: -65%;
     width: 300px;
     border-radius: 8px;
     padding-top: 22px;
-}
-.big-hidden{
-    display: none;
+    margin-bottom: -165px;
 }
 
-.consist-form-elements{
+.consist-form-elements {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -224,26 +214,33 @@ button.btn-search:hover {
     padding-bottom: 12px;
 }
 
+.consist-form-elements:nth-child(3) {
+    padding-bottom: 0;
+}
+
 .consist-form-elements .button {
     background-color: white;
-    color: #CECECE;
-    border: 1px solid #CECECE;
-    width: 30px;
-    height: 30px;
-}
-
-.consist-form-elements .button:hover {
-    background-color: white;
     color: #3077C6;
-    border-color: #3077C6;
+    border: 1px solid #3077C6;
     width: 30px;
     height: 30px;
-    font-size:12px ;
+    font-size: 12px;
 }
 
-.age-selector{
-    padding: 0 0 22px 19px;
+.consist-form-elements .button:disabled {
+    color: #CECECE;
+    border-color: #CECECE;
+}
+
+.age-selector {
+    padding: 12px 0 22px 19px;
     justify-content: space-between;
+    font-size: 12px;
+}
+
+select {
+    margin-top: 12px;
+    font-size: 12px;
 }
 
 @media only screen and (min-width: 783px) {
@@ -455,11 +452,11 @@ button.btn-search:hover {
         margin-bottom: 8px;
     }
 
-    .big-hidden{
+    .big-hidden {
         display: flex;
     }
 
-    .consist-form-elements{
+    .consist-form-elements {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -482,11 +479,6 @@ button.btn-search:hover {
         border-color: #3077C6;
         width: 30px;
         height: 30px;
-        font-size:12px ;
-    }
-
-    .age-selector{
-        padding: 0 0 22px 19px;
-        justify-content: space-between;
+        font-size: 12px;
     }
 }
