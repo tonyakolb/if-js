@@ -31,6 +31,7 @@ h2.homes-title::after {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
   min-width: 0;
   padding: 0 60px;
   position: relative;
@@ -42,8 +43,11 @@ h2.homes-title::after {
   flex-direction: column;
 }
 
-.apartment-photo {
-  max-width: 295px;
+.photo {
+  min-height: 296px;
+  min-width: 296px;
+  max-height: 296px;
+  max-width: 296px;
 }
 
 .hotel-name {
