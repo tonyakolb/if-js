@@ -2,7 +2,7 @@
   "name": "if",
   "version": "1.0.0",
   "description": "",
-  "main": "lesson-9.js",
+  "main": "lesson-9/lesson-9.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint --debug *.js",
