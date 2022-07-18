@@ -9,6 +9,7 @@
     <link href="src/styles/homes.css" rel="stylesheet"/>
     <link href="src/styles/fonts.css" rel="stylesheet"/>
     <link href="src/styles/top-section.css" rel="stylesheet"/>
+    <link href="src/styles/hotels.css" rel="stylesheet"/>
     <title>Title</title>
 </head>
 <body>
@@ -72,7 +73,7 @@
             <span class="roboto-400 title-page sign">Your destination or hotel name</span>
             <span class="roboto-400 title-page">Check-in — Check-out</span>
         </div>
-        <form>
+        <form onsubmit="return false">
             <div class="search col-md-10">
                 <label for="destination"></label>
                 <input
@@ -112,7 +113,7 @@
                     </div>
 
                 </div>
-                <button class="btn-search col-s-12 col-md-2">Search</button>
+                <button class="btn-search col-s-12 col-md-2" id="search-hotel">Search</button>
             </div>
             <div id="consist-form" style="display:none" class="consist-form">
                 <div class="consist-form-elements">
@@ -171,6 +172,13 @@
         </div>
     </div>
 </main>
+<div class="hotels container">
+    <div class="hotels-title-center" id="hotels-title" style="display:none">
+        <h2 class="hotels-title">Available hotels</h2>
+    </div>
+    <div class="pictures" id="hotels-content">
+    </div>
+</div>
 <section class="homes container">
     <div class="homes-title-center">
         <h2 class="homes-title">Homes guests loves</h2>
@@ -179,6 +187,6 @@
 </section>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/src/js/slick.min.js"></script>
-</body>
 <script src="/src/js/main.js"></script>
+</body>
 </html>
