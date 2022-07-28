@@ -183,13 +183,12 @@ const availableHotelsTitle = document.getElementById('hotels-title');
 const availableHotelsBlock = document.getElementById('hotels-content');
 const generateDefiniteCity = (search) => `${hotelsUrl}search=${search}`;
 
-const getHotel = async () => {
+const getHotel = () => {
   const search = document.getElementById('destination')?.value;
   availableHotelsTitle.style.display = '';
   availableHotelsBlock.innerHTML = '';
 
-  // eslint-disable-next-line no-unused-vars
-  const response = await fetch(generateDefiniteCity(search))
+  fetch(generateDefiniteCity(search))
     .then((response) => response.json())
     .then(function (hotels) {
       hotels.forEach((hotel) => {
@@ -201,9 +200,7 @@ const getHotel = async () => {
                        </div> `;
       });
     })
-    .catch(function (error) {
-      console.log(error);
-    });
+    .catch((err) => console.log(err));
 };
 
 document.getElementById('search-hotel').addEventListener('click', getHotel);
