@@ -175,3 +175,32 @@ minusButtonChild.addEventListener('click', () => {
     { once: true }
   );
 });
+
+// Available hotels
+
+const hotelsUrl = 'https://fe-student-api.herokuapp.com/api/hotels?';
+const availableHotelsTitle = document.getElementById('hotels-title');
+const availableHotelsBlock = document.getElementById('hotels-content');
+const generateDefiniteCity = (search) => `${hotelsUrl}search=${search}`;
+
+const getHotel = () => {
+  const search = document.getElementById('destination')?.value;
+  availableHotelsTitle.style.display = '';
+  availableHotelsBlock.innerHTML = '';
+
+  fetch(generateDefiniteCity(search))
+    .then((response) => response.json())
+    .then(function (hotels) {
+      hotels.forEach((hotel) => {
+        availableHotelsBlock.innerHTML += `
+                       <div class="picture">
+                          <img class="photo mini-picture" src="${hotel.imageUrl}" alt="${hotel.name}">
+                          <span class="hotel-name">${hotel.name}</span>
+                          <span class="hotel-location">${hotel.city}, ${hotel.country}</span>
+                       </div> `;
+      });
+    })
+    .catch((err) => console.log(err));
+};
+
+document.getElementById('search-hotel').addEventListener('click', getHotel);

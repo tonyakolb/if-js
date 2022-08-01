@@ -1,0 +1,140 @@
+.hotels {
+    background-color: #ffffff;
+}
+
+.hotels-title-center {
+    display: flex;
+    justify-content: center;
+    padding-top:120px;
+}
+
+h2.hotels-title {
+    position: relative;
+    display: inline-block;
+    margin-top:0;
+    margin-bottom: 105px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+h2.hotels-title::after {
+    content: "";
+    position: absolute;
+    background: #f5bd41;
+    left: 5%;
+    bottom: -20px;
+    width: 90%;
+    height: 4px;
+}
+
+.pictures {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-width: 0;
+    padding: 0 60px;
+    position: relative;
+}
+
+.picture {
+    height: 435px;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo {
+    min-height: 296px;
+    min-width: 296px;
+    max-height: 296px;
+    max-width: 296px;
+}
+
+.hotel-name {
+    color: #3077c6;
+    font-size: 24px;
+    margin: 24px 0;
+}
+
+.hotel-location {
+    color: #bfbfbf;
+    font-size: 24px;
+}
+
+.right {
+    position: relative;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
+    .hotels {
+        padding-bottom: 20px;
+    }
+
+    .picture {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+    .hotels {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .pictures {
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    .picture {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hotels {
+        padding-top: 17px;
+        padding-bottom: 40px;
+        margin-bottom: 0;
+    }
+
+    h2.hotels-title {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    .hotel-name {
+        font-size: 12px;
+        margin: 8px 0 4px;
+    }
+
+    .hotel-location {
+        font-size: 12px;
+    }
+
+    div.pictures {
+        margin-top: 5px;
+    }
+
+    .pictures {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .picture {
+        height: 209px;
+    }
+
+    .no-photo {
+        display: none;
+    }
+
+    .mini-picture {
+        width: 156px;
+        height: 156px;
+    }
+}
+
+
+
