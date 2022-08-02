@@ -73,3 +73,20 @@
 //               </div>
 //       `;
 // });
+
+// const content = document.getElementById('content');
+
+// fetch('https://fe-student-api.herokuapp.com/api/hotels/popular')
+//   .then((response) => response.json())
+//   .then((result) => {
+//     result.forEach((item) => {
+//       content.innerHTML += `
+//               <div class="picture">
+//                   <img class="photo mini-picture" src="${item.imageUrl}" alt="${item.name}">
+//                   <span class="hotel-name">${item.name}</span>
+//                   <span class="hotel-location">${item.city}, ${item.country}</span>
+//               </div>
+//       `;
+//     });
+//   })
+//   .catch((err) => console.log(err));
